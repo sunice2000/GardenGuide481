@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">GardenGuide</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_something">Something</string>
+    <string name="title_activity_browse">Browse</string>
+    <string name="title_activity_calendar">Calendar</string>
+    <string name="title_activity_my_plants">MyPlants</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="title_activity_tasks">Tasks</string>
+</resources>
