@@ -23,10 +23,6 @@
             android:label="@string/title_activity_something"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".Browse"
-            android:label="@string/title_activity_browse"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
             android:name=".Calendar"
             android:label="@string/title_activity_calendar"
             android:theme="@style/AppTheme.NoActionBar" />
@@ -41,7 +37,9 @@
         <activity
             android:name=".Tasks"
             android:label="@string/title_activity_tasks"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Rose" />
+        <activity android:name=".Browse"></activity>
     </application>
 
 </manifest>

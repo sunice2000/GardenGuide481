@@ -4,6 +4,42 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
+    <string-array name="array_plants">
+        <item>Daisy</item>
+        <item>Lily</item>
+        <item>Rose</item>
+        <item>Daisy</item>
+        <item>Lily</item>
+        <item>Rose</item>
+        <item>Daisy</item>
+        <item>Lily</item>
+        <item>Rose</item>
+        <item>Daisy</item>
+        <item>Lily</item>
+        <item>Rose</item>
+        <item>Daisy</item>
+        <item>Lily</item>
+        <item>Rose</item>
+        <item>Daisy</item>
+        <item>Lily</item>
+        <item>Rose</item>
+        <item>Daisy</item>
+        <item>Lily</item>
+        <item>Rose</item>
+        <item>Daisy</item>
+        <item>Lily</item>
+        <item>Rose</item>
+        <item>Daisy</item>
+        <item>Lily</item>
+        <item>Rose</item>
+        <item>Daisy</item>
+        <item>Lily</item>
+        <item>Rose</item>
+        <item>Daisy</item>
+        <item>Lily</item>
+        <item>Rose</item>
+    </string-array>
+
     <string name="action_settings">Settings</string>
     <string name="title_activity_something">Something</string>
     <string name="title_activity_browse">Browse</string>
