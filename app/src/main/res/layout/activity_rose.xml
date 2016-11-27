@@ -23,14 +23,37 @@
         android:layout_alignParentEnd="true" />
 
     <TextView
-        android:text="Rose"
-        android:layout_width="wrap_content"
+        android:text="Rose (Rosa)"
         android:layout_height="wrap_content"
+        android:layout_marginRight="37dp"
+        android:layout_marginEnd="37dp"
+        android:layout_marginTop="15dp"
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:textAppearance="@android:style/TextAppearance.Large"
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginRight="102dp"
-        android:layout_marginEnd="102dp"
-        android:layout_marginTop="49dp"
-        android:id="@+id/textView5" />
+        android:layout_alignParentEnd="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/rose_care"
+        android:id="@+id/imageView4"
+        android:layout_below="@+id/imageView2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="A prickly bush or shrub that typically bears red, pink, yellow, or white fragrant flowers, native to north temperate regions. Numerous hybrids and cultivars have been developed and are widely grown as ornamentals."
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView6"
+        android:layout_marginTop="12dp"
+        android:layout_below="@+id/textView5"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="174dp"
+        android:layout_marginStart="174dp" />
+
 </RelativeLayout>

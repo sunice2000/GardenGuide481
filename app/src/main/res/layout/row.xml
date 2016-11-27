@@ -7,7 +7,7 @@
 
 
     <TextView
-        android:id="@+id/tvName"
+        android:id="@+id/plantName"
         android:paddingLeft="10dp"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
@@ -15,7 +15,7 @@
         android:layout_weight="1"
         />
     <ImageView
-    android:id="@+id/tvPrice"
+    android:id="@+id/plantImage"
     android:layout_width="50dp"
     android:layout_height="50dp"/>
 

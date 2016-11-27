@@ -8,11 +8,11 @@ package com.kysuther.gardenguide;
 public class Plants {
 
     public String name;
-    public Integer price;
-    public Plants(String name, Integer price) {
+    public Integer plant;
+    public Plants(String name, Integer plant){
         super();
         this.name = name;
-        this.price = price;
+        this.plant = plant;
     }
     public String getName() {
         return name;
@@ -20,11 +20,11 @@ public class Plants {
     public void setName(String name) {
         this.name = name;
     }
-    public Integer getPrice() {
-        return price;
+    public Integer getPlant() {
+        return plant;
     }
-    public void setPrice(Integer price) {
-        this.price = price;
+    public void setPlant(Integer price) {
+        this.plant = plant;
     }
 
 }

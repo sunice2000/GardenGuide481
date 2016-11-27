@@ -1,6 +1,7 @@
 package com.kysuther.gardenguide;
 
 import android.content.Context;
+import android.content.Intent;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
@@ -70,22 +71,39 @@ public class Browse extends AppCompatActivity {
         // TODO Auto-generated method stub
         super.onResume();
 
+        mPlantsArrayList.add(new Plants("Abelia", R.drawable.abelia));
+        mPlantsArrayList.add(new Plants("Abeliophyllum", R.drawable.abeliophyllum));
+        mPlantsArrayList.add(new Plants("Abelmoschus", R.drawable.abelmoschus));
+        mPlantsArrayList.add(new Plants("Abies", R.drawable.abies));
+        mPlantsArrayList.add(new Plants("Abroma", R.drawable.abroma));
+        mPlantsArrayList.add(new Plants("Abromeitiella", R.drawable.abromeitiella));
+        mPlantsArrayList.add(new Plants("Abronia", R.drawable.abronia));
+        mPlantsArrayList.add(new Plants("Abrus", R.drawable.abrus));
+        mPlantsArrayList.add(new Plants("Abutilon", R.drawable.abutilon));
+        mPlantsArrayList.add(new Plants("Acacia", R.drawable.acacia));
+        mPlantsArrayList.add(new Plants("Ramonda", R.drawable.ramonda));
+        mPlantsArrayList.add(new Plants("Ranunculus", R.drawable.ranunculus));
+        mPlantsArrayList.add(new Plants("Ranzania", R.drawable.ranzania));
+        mPlantsArrayList.add(new Plants("Raoulia", R.drawable.raoulia));
+        mPlantsArrayList.add(new Plants("Raphia", R.drawable.raphia));
+        mPlantsArrayList.add(new Plants("Ratibida", R.drawable.ratibida));
+        mPlantsArrayList.add(new Plants("Ravenala", R.drawable.ravenala));
+        mPlantsArrayList.add(new Plants("Rebutia", R.drawable.rebutia));
+        mPlantsArrayList.add(new Plants("Rehderodendron", R.drawable.rehderodendron));
+        mPlantsArrayList.add(new Plants("Rehmannia", R.drawable.rehmannia));
+        mPlantsArrayList.add(new Plants("Robinia", R.drawable.robinia));
+        mPlantsArrayList.add(new Plants("Rochea", R.drawable.rochea));
+        mPlantsArrayList.add(new Plants("Rodgersia", R.drawable.rodgersia));
+        mPlantsArrayList.add(new Plants("Rodriguezia", R.drawable.rodriguezia));
+        mPlantsArrayList.add(new Plants("Rohdea", R.drawable.rohdea));
+        mPlantsArrayList.add(new Plants("Romanzoffia", R.drawable.romanzoffia));
+        mPlantsArrayList.add(new Plants("Romneya", R.drawable.romneya));
+        mPlantsArrayList.add(new Plants("Romulea", R.drawable.romulea));
+        mPlantsArrayList.add(new Plants("Rondeletia", R.drawable.rondeletia));
+        mPlantsArrayList.add(new Plants("Roscoea", R.drawable.roscoea));
         mPlantsArrayList.add(new Plants("Rose", R.drawable.rose));
-        mPlantsArrayList.add(new Plants("Rose2", R.drawable.rose));
-        mPlantsArrayList.add(new Plants("c", R.drawable.rose));
-        mPlantsArrayList.add(new Plants("d", R.drawable.rose));
-        mPlantsArrayList.add(new Plants("e", R.drawable.rose));
-        mPlantsArrayList.add(new Plants("f", R.drawable.rose));
-        mPlantsArrayList.add(new Plants("g", R.drawable.rose));
-        mPlantsArrayList.add(new Plants("h", R.drawable.rose));
-        mPlantsArrayList.add(new Plants("i", R.drawable.rose));
-        mPlantsArrayList.add(new Plants("Rose", R.drawable.rose));
-        mPlantsArrayList.add(new Plants("k", R.drawable.rose));
-        mPlantsArrayList.add(new Plants("l", R.drawable.rose));
-        mPlantsArrayList.add(new Plants("I am Rose", R.drawable.rose));
-        mPlantsArrayList.add(new Plants("n", R.drawable.rose));
-        mPlantsArrayList.add(new Plants("o", R.drawable.rose));
-        mPlantsArrayList.add(new Plants("p", R.drawable.rose));
+        mPlantsArrayList.add(new Plants("Rosemary", R.drawable.rosemary));
+        mPlantsArrayList.add(new Plants("Rossioglossum", R.drawable.rossioglossum));
 
 
         adapter1 = new MyAdapter(Browse.this, mPlantsArrayList);
@@ -123,7 +141,7 @@ public class Browse extends AppCompatActivity {
 
         private class ViewHolder {
             LinearLayout llContainer;
-            TextView tvName,tvPrice;
+            TextView plantName,plantImage;
         }
 
         @Override
@@ -136,20 +154,24 @@ public class Browse extends AppCompatActivity {
                 holder = new ViewHolder2();
                 convertView = inflater.inflate(R.layout.row, null);
                 holder.container = (LinearLayout)convertView.findViewById(R.id.llContainer);
-                holder.text = (TextView) convertView.findViewById(R.id.tvName);
-                holder.icon = (ImageView) convertView.findViewById(R.id.tvPrice);
+                holder.text = (TextView) convertView.findViewById(R.id.plantName);
+                holder.icon = (ImageView) convertView.findViewById(R.id.plantImage);
                 convertView.setTag(holder);
             } else {
                 holder = (ViewHolder2) convertView.getTag();
             }
             holder.text.setText(mDisplayedValues.get(position).name);
-            holder.icon.setImageResource(mDisplayedValues.get(position).price);
+            holder.icon.setImageResource(mDisplayedValues.get(position).plant);
 
             holder.container.setOnClickListener(new View.OnClickListener() {
 
                 public void onClick(View v) {
 
                     Toast.makeText(Browse.this, mDisplayedValues.get(position).name, Toast.LENGTH_SHORT).show();
+                    if((mDisplayedValues.get(position).name) == "Rose") {
+                        Intent intent = new Intent(Browse.this, Rose.class);
+                        startActivity(intent);
+                    }
                 }
             });
 
@@ -193,7 +215,7 @@ public class Browse extends AppCompatActivity {
                         for (int i = 0; i < mOriginalValues.size(); i++) {
                             String data = mOriginalValues.get(i).name;
                             if (data.toLowerCase().startsWith(constraint.toString())) {
-                                FilteredArrList.add(new Plants(mOriginalValues.get(i).name,mOriginalValues.get(i).price));
+                                FilteredArrList.add(new Plants(mOriginalValues.get(i).name,mOriginalValues.get(i).plant));
                             }
                         }
                         // set the Filtered result to return
