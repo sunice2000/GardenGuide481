@@ -47,4 +47,6 @@
     <string name="title_activity_my_plants">MyPlants</string>
     <string name="title_activity_settings">Settings</string>
     <string name="title_activity_tasks">Tasks</string>
+    <string name="title_activity_my_plants2">myPlants2</string>
+    <string name="title_activity_tasks2">Tasks2</string>
 </resources>

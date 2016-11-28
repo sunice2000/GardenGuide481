@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/content_tasks"
+    android:id="@+id/content_tasks2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
@@ -10,17 +10,20 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.kysuther.gardenguide.Tasks"
-    tools:showIn="@layout/activity_tasks">
+    tools:context="com.kysuther.gardenguide.Tasks2"
+    tools:showIn="@layout/app_bar_tasks2">
 
-    <TextView
-        android:text="You have no tasks to complete!"
+    <CheckBox
+        android:text="Water Roses"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/checkBox"
+        android:layout_marginLeft="40dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="36dp"
+        android:textSize="18sp"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="75dp"
-        android:id="@+id/textView8"
-        android:textAppearance="@style/TextAppearance.AppCompat"
-        android:textSize="24sp" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
 </RelativeLayout>

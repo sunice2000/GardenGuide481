@@ -13,4 +13,14 @@
     tools:context="com.kysuther.gardenguide.MyPlants"
     tools:showIn="@layout/activity_my_plants">
 
+    <TextView
+        android:text="You have not added any plants!"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="75dp"
+        android:id="@+id/textView7"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textSize="18sp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>
