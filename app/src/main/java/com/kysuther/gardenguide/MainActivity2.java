@@ -67,7 +67,7 @@ public class MainActivity2 extends AppCompatActivity {
                         startActivity(intent4);
                         break;
                     case 5:
-                        Intent intent5 = new Intent(MainActivity2.this, Settings.class);
+                        Intent intent5 = new Intent(MainActivity2.this, SettingsNEW2.class);
                         startActivity(intent5);
                         break;
 

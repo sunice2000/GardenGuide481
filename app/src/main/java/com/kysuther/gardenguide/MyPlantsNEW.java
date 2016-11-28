@@ -1,8 +1,8 @@
 package com.kysuther.gardenguide;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.support.design.widget.NavigationView;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -10,23 +10,31 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.ListView;
-import android.widget.ArrayAdapter;
+import android.view.View;
 import android.widget.AdapterView;
-import android.content.Intent;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
-public class MainActivity extends AppCompatActivity {
+public class MyPlantsNEW extends AppCompatActivity {
 
-    private ListView drawerNavList;
-    private ArrayAdapter<String> drawerAdapter;
+    private ListView drawerNavList2;
+    private ArrayAdapter<String> drawerAdapter2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_my_plants_new);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MyPlantsNEW.this, Browse.class);
+                startActivity(intent);
+            }
+        });
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -34,41 +42,41 @@ public class MainActivity extends AppCompatActivity {
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
-        drawerNavList = (ListView)findViewById(R.id.navList);
+        drawerNavList2 = (ListView)findViewById(R.id.navList);
         addDrawerItems();
     }
 
     private void addDrawerItems(){
         String[] menuArr = { "Home", "Browse", "My Plants", "Calendar", "Tasks", "Settings" };
-        drawerAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, menuArr);
-        drawerNavList.setAdapter(drawerAdapter);
+        drawerAdapter2 = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, menuArr);
+        drawerNavList2.setAdapter(drawerAdapter2);
 
-        drawerNavList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        drawerNavList2.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 switch (position) {
                     case 0: //Log History
-                        Intent intent = new Intent(MainActivity.this, MainActivity.class);
+                        Intent intent = new Intent(MyPlantsNEW.this, MainActivity.class);
                         startActivity(intent);
                         break;
                     case 1:
-                        Intent intent1 = new Intent(MainActivity.this, Browse.class);
+                        Intent intent1 = new Intent(MyPlantsNEW.this, Browse.class);
                         startActivity(intent1);
                         break;
                     case 2:
-                        Intent intent2 = new Intent(MainActivity.this, MyPlantsNEW.class);
+                        Intent intent2 = new Intent(MyPlantsNEW.this, MyPlantsNEW.class);
                         startActivity(intent2);
                         break;
                     case 3:
-                        Intent intent3 = new Intent(MainActivity.this, Calendar.class);
+                        Intent intent3 = new Intent(MyPlantsNEW.this, Calendar.class);
                         startActivity(intent3);
                         break;
                     case 4:
-                        Intent intent4 = new Intent(MainActivity.this, TasksNEW.class);
+                        Intent intent4 = new Intent(MyPlantsNEW.this, TasksNEW.class);
                         startActivity(intent4);
                         break;
                     case 5:
-                        Intent intent5 = new Intent(MainActivity.this, SettingsNEW.class);
+                        Intent intent5 = new Intent(MyPlantsNEW.this, SettingsNEW.class);
                         startActivity(intent5);
                         break;
 

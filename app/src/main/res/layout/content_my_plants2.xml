@@ -16,7 +16,7 @@
     <ImageButton
         android:layout_height="100dip"
         app:srcCompat="@drawable/rose"
-        android:id="@+id/imageButton"
+        android:id="@+id/rosePlantButton"
         android:layout_width="90dip"
         style="@android:style/Widget.DeviceDefault.ImageButton"
         android:scaleType="centerCrop"
@@ -37,7 +37,7 @@
         android:textSize="18sp"
         android:layout_marginRight="24dp"
         android:layout_marginEnd="24dp"
-        android:layout_below="@+id/imageButton"
-        android:layout_alignRight="@+id/imageButton"
-        android:layout_alignEnd="@+id/imageButton" />
+        android:layout_below="@+id/rosePlantButton"
+        android:layout_alignRight="@+id/rosePlantButton"
+        android:layout_alignEnd="@+id/rosePlantButton" />
 </RelativeLayout>

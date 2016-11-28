@@ -1,6 +1,7 @@
 package com.kysuther.gardenguide;
 
 import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -15,6 +16,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageButton;
 import android.widget.ListView;
 
 public class myPlants2 extends AppCompatActivity {
@@ -34,6 +36,15 @@ public class myPlants2 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(myPlants2.this, Browse.class);
+                startActivity(intent);
+            }
+        });
+
+        ImageButton roseButton = (ImageButton) findViewById(R.id.rosePlantButton);
+        roseButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(myPlants2.this, Rose2.class);
                 startActivity(intent);
             }
         });
@@ -78,7 +89,7 @@ public class myPlants2 extends AppCompatActivity {
                         startActivity(intent4);
                         break;
                     case 5:
-                        Intent intent5 = new Intent(myPlants2.this, Settings.class);
+                        Intent intent5 = new Intent(myPlants2.this, SettingsNEW2.class);
                         startActivity(intent5);
                         break;
 

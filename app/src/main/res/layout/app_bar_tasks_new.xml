@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="com.kysuther.gardenguide.Settings">
+    tools:context="com.kysuther.gardenguide.TasksNEW">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -21,7 +21,7 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_settings" />
+    <include layout="@layout/content_tasks_new" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"

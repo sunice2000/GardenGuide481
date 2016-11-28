@@ -1,8 +1,7 @@
 package com.kysuther.gardenguide;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -10,20 +9,20 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.ListView;
-import android.widget.ArrayAdapter;
+import android.view.View;
 import android.widget.AdapterView;
-import android.content.Intent;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
-public class MainActivity extends AppCompatActivity {
+public class Rose2 extends AppCompatActivity {
 
-    private ListView drawerNavList;
-    private ArrayAdapter<String> drawerAdapter;
+    private ListView drawerNavList2;
+    private ArrayAdapter<String> drawerAdapter2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_rose2);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -34,41 +33,41 @@ public class MainActivity extends AppCompatActivity {
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
-        drawerNavList = (ListView)findViewById(R.id.navList);
+        drawerNavList2 = (ListView)findViewById(R.id.navList);
         addDrawerItems();
     }
 
     private void addDrawerItems(){
         String[] menuArr = { "Home", "Browse", "My Plants", "Calendar", "Tasks", "Settings" };
-        drawerAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, menuArr);
-        drawerNavList.setAdapter(drawerAdapter);
+        drawerAdapter2 = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, menuArr);
+        drawerNavList2.setAdapter(drawerAdapter2);
 
-        drawerNavList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        drawerNavList2.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 switch (position) {
                     case 0: //Log History
-                        Intent intent = new Intent(MainActivity.this, MainActivity.class);
+                        Intent intent = new Intent(Rose2.this, MainActivity2.class);
                         startActivity(intent);
                         break;
                     case 1:
-                        Intent intent1 = new Intent(MainActivity.this, Browse.class);
+                        Intent intent1 = new Intent(Rose2.this, Browse.class);
                         startActivity(intent1);
                         break;
                     case 2:
-                        Intent intent2 = new Intent(MainActivity.this, MyPlantsNEW.class);
+                        Intent intent2 = new Intent(Rose2.this, myPlants2.class);
                         startActivity(intent2);
                         break;
                     case 3:
-                        Intent intent3 = new Intent(MainActivity.this, Calendar.class);
+                        Intent intent3 = new Intent(Rose2.this, Calendar.class);
                         startActivity(intent3);
                         break;
                     case 4:
-                        Intent intent4 = new Intent(MainActivity.this, TasksNEW.class);
+                        Intent intent4 = new Intent(Rose2.this, Tasks2.class);
                         startActivity(intent4);
                         break;
                     case 5:
-                        Intent intent5 = new Intent(MainActivity.this, SettingsNEW.class);
+                        Intent intent5 = new Intent(Rose2.this, SettingsNEW2.class);
                         startActivity(intent5);
                         break;
 
