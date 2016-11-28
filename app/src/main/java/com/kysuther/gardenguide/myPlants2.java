@@ -73,7 +73,7 @@ public class myPlants2 extends AppCompatActivity {
                         startActivity(intent);
                         break;
                     case 1:
-                        Intent intent1 = new Intent(myPlants2.this, Browse.class);
+                        Intent intent1 = new Intent(myPlants2.this, Browse2.class);
                         startActivity(intent1);
                         break;
                     case 2:

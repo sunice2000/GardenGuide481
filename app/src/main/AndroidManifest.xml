@@ -35,6 +35,10 @@
             android:label="Browse"
             />
         <activity
+            android:name=".Browse2"
+            android:label="Browse"
+            />
+        <activity
             android:name=".myPlants2"
             android:label="My Plants"
             android:theme="@style/AppTheme.NoActionBar">
