@@ -13,4 +13,12 @@
     tools:context="com.kysuther.gardenguide.SettingsNEW"
     tools:showIn="@layout/app_bar_settings_new">
 
+    <Button
+        android:text="Language: English"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="43dp"
+        android:id="@+id/langButton1" />
 </RelativeLayout>

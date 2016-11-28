@@ -2,6 +2,7 @@ package com.kysuther.gardenguide;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -12,6 +13,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 
 public class SettingsNEW2 extends AppCompatActivity {
@@ -26,6 +28,12 @@ public class SettingsNEW2 extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        final Button changeLangButton = (Button) findViewById(R.id.langButton1);
+        changeLangButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                Snackbar.make(view, "Only English is available at this time.", Snackbar.LENGTH_LONG).setAction("Action", null).show();
+            }
+        });
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
