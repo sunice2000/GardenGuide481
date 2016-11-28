@@ -31,15 +31,8 @@ public class RoseNEW extends AppCompatActivity {
         addRoseButton.setTag(0);
         addRoseButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                int status = (Integer) view.getTag();
-                if(status == 0) {
-                    //Snackbar.make(view, "Rose has been added to your plants.", Snackbar.LENGTH_LONG).setAction("Action", null).show();
-                    addRoseButton.setText("Added! View in My Plants");
-                    view.setTag(1);
-                }else{
-                    Intent intent2 = new Intent(RoseNEW.this, myPlants2.class);
-                    startActivity(intent2);
-                }
+                Intent intent2 = new Intent(RoseNEW.this, Rose2.class);
+                startActivity(intent2);
             }
         });
 
