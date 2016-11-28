@@ -169,7 +169,7 @@ public class Browse extends AppCompatActivity {
 
                     Toast.makeText(Browse.this, mDisplayedValues.get(position).name, Toast.LENGTH_SHORT).show();
                     if((mDisplayedValues.get(position).name) == "Rose") {
-                        Intent intent = new Intent(Browse.this, Rose.class);
+                        Intent intent = new Intent(Browse.this, RoseNEW.class);
                         startActivity(intent);
                     }
                 }
