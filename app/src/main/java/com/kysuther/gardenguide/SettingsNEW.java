@@ -38,7 +38,7 @@ public class SettingsNEW extends AppCompatActivity {
     }
 
     private void addDrawerItems(){
-        String[] menuArr = { "Home", "Browse", "My Plants", "Calendar", "Tasks", "Settings" };
+        String[] menuArr = { "Home", "Browse", "My Plants", "Tasks", "Settings" };
         drawerAdapter2 = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, menuArr);
         drawerNavList2.setAdapter(drawerAdapter2);
 
@@ -59,14 +59,10 @@ public class SettingsNEW extends AppCompatActivity {
                         startActivity(intent2);
                         break;
                     case 3:
-                        Intent intent3 = new Intent(SettingsNEW.this, Calendar.class);
-                        startActivity(intent3);
-                        break;
-                    case 4:
                         Intent intent4 = new Intent(SettingsNEW.this, TasksNEW.class);
                         startActivity(intent4);
                         break;
-                    case 5:
+                    case 4:
                         Intent intent5 = new Intent(SettingsNEW.this, SettingsNEW.class);
                         startActivity(intent5);
                         break;

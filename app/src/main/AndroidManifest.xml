@@ -30,18 +30,6 @@
             android:name=".Something"
             android:label="@string/title_activity_something"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".Calendar"
-            android:label="@string/title_activity_calendar"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".MyPlants"
-            android:label="My Plants"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".Settings"
-            android:label="@string/title_activity_settings"
-            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Rose" />
         <activity android:name=".Browse" />
         <activity
@@ -90,7 +78,7 @@
         </activity>
         <activity
             android:name=".MyPlantsNEW"
-            android:label="@string/title_activity_my_plants_new"
+            android:label="My Plants"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
